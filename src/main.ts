@@ -4,6 +4,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors(); //Habilitar cors
   //Swagger implementation
   const config = new DocumentBuilder()
     .setTitle('Productos para uniandes')
